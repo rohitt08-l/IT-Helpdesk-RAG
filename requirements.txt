@@ -4,3 +4,5 @@ faiss-cpu
 pypdf
 streamlit
 python-dotenv
+langchain-openai
+langchain-groq

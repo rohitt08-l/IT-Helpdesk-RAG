@@ -1,7 +1,7 @@
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 prompt = PromptTemplate(
-    template=\"\"\"
+    template="""
 You are an IT Helpdesk Assistant.
 
 Answer only from the provided context.
@@ -14,6 +14,6 @@ Context:
 
 Question:
 {question}
-\"\"\",
-    input_variables=[\"context\", \"question\"]
+""",
+    input_variables=["context", "question"]
 )

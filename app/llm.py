@@ -1,19 +1,14 @@
-from langchain.prompts import PromptTemplate
+from langchain_groq import ChatGroq
+from dotenv import load_dotenv
 
-prompt = PromptTemplate(
-    template=\"\"\"
-You are an IT Helpdesk Assistant.
+load_dotenv()
 
-Answer only from the provided context.
 
-If the answer is unavailable, say:
-'I could not find this information in the knowledge base.'
+def load_llm():
 
-Context:
-{context}
+    llm = ChatGroq(
+        model="llama3-8b-8192",
+        temperature=0
+    )
 
-Question:
-{question}
-\"\"\",
-    input_variables=[\"context\", \"question\"]
-)
+    return llm
