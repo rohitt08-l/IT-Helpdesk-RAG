@@ -6,3 +6,4 @@ streamlit
 python-dotenv
 langchain-openai
 langchain-groq
+sentence-transformers
