@@ -1,7 +1,6 @@
 from app.rag_pipeline import build_rag_pipeline
 from langchain_core.output_parsers import StrOutputParser
 
-
 retriever, llm = build_rag_pipeline()
 
 parser = StrOutputParser()
@@ -19,7 +18,7 @@ while True:
     # Combine retrieved context
     context = "\n\n".join([doc.page_content for doc in docs])
 
-    # Format prompt
+    # Format the prompt
     final_prompt = f"""
 You are an IT Helpdesk Assistant.
 
